@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwadraty</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Main Menu -->
+        <div id="menu-screen" class="screen">
+            <h1>Game Settings</h1>
+            <div class="settings-container">
+                <div class="input-group">
+                    <label for="board-size">Board Size:</label>
+                    <input type="number" id="board-size" value="10" min="2" max="20">
+                </div>
+                <div class="input-group">
+                    <label for="time-limit">Time (s):</label>
+                    <input type="number" id="time-limit" value="60" min="1">
+                </div>
+                <div class="button-group">
+                    <button id="start-btn">Start</button>
+                    <button id="restore-defaults-btn">Restore Defaults</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <div class="game-container">
+                <div id="board-container">
+                    <div id="game-board"></div>
+                </div>
+                <div id="sidebar">
+                    <div id="timer-display" class="large-text">60</div>
+                    <div id="result-message" class="large-text hidden"></div>
+                    <div id="game-controls">
+                        <button id="reset-btn">Reset</button>
+                        <button id="menu-btn">Return to Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

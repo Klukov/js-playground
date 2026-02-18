@@ -1,0 +1,187 @@
+:root {
+    --bg-color: #ffffff;
+    --board-bg: #808080;
+    --button-bg: #f0f0f0;
+    --correct-color: #90ee90;
+    --text-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    min-width: 960px;
+    min-height: 540px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Menu Screen */
+#menu-screen h1 {
+    font-size: 3rem; /* Will be scaled by JS */
+    margin-bottom: 2rem;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group label {
+    width: 50%;
+    text-align: right;
+    padding-right: 0.5rem;
+    font-size: 2rem; /* Will be scaled by JS */
+}
+
+.input-group input {
+    width: 6rem; /* Fixed width as requested */
+    text-align: left;
+    font-size: 2rem; /* Will be scaled by JS */
+}
+
+.button-group button {
+    font-size: 2rem; /* Will be scaled by JS */
+}
+
+/* Spacer to balance the layout so the colon stays centered */
+.input-group::after {
+    content: "";
+    width: calc(50% - 6rem);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-group button {
+    padding: 0.25em 1em; /* Adjust padding to achieve 1.5x height */
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.5em;
+}
+
+/* Game Screen */
+#game-screen {
+    flex-direction: row;
+    padding: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+}
+
+#board-container {
+    background-color: var(--board-bg);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    max-height: 90%;
+    max-width: 90%;
+}
+
+#game-board {
+    display: grid;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+}
+
+.board-btn {
+    background-color: var(--bg-color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem; /* Scaled by JS */
+    width: 100%;
+    height: 100%;
+}
+
+.board-btn.correct {
+    background-color: var(--correct-color);
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the sidebar content too */
+    justify-content: center;
+    min-width: 300px;
+}
+
+.large-text {
+    font-size: 4rem; /* Scaled by JS */
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+#result-message {
+    line-height: 1.5;
+    white-space: pre-line;
+    text-align: center;
+}
+
+#game-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#game-controls button {
+    font-size: 2rem; /* Scaled by JS */
+    padding: 0.5rem 1rem;
+}
