@@ -2,12 +2,12 @@
 
 A clean, minimalist, and slightly experimental personal space for JavaScript micro-apps, prototypes, and experiments.
 
-https://klukov.github.io/js-playground/
+🔗 **Live Site:** https://klukov.github.io/js-playground/
 
 ## 🚀 Projects
 
 The playground currently features:
-- **Kwadraty** – An interactive square-based experiment.
+- **<a href="https://klukov.github.io/js-playground/kwadraty/" target="_blank">Kwadraty</a>** – An interactive square-based experiment.
 - *More coming soon...*
 
 ## 🛠️ Technical Stack
