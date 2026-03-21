@@ -15,6 +15,11 @@
       <h3>${app.name}</h3>
       <p>${app.description || ''}</p>
     `;
+    a.addEventListener('click', () => {
+      if (app.eventName && typeof umami !== 'undefined') {
+        umami.track(app.eventName);
+      }
+    });
     grid.appendChild(a);
   });
 })();
