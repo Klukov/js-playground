@@ -5,7 +5,7 @@ const apps = [
     name: "Kwadraty",
     path: "./kwadraty/",
     description: "Interactive square-based experiment.",
-    eventName: "ButtonClicked-Kwadraty"
+    eventName: "mainPage-button-kwadraty"
   }
 ];
 

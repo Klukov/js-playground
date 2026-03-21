@@ -39,6 +39,10 @@ function startGame() {
     boardSize = parseInt(boardSizeInput.value) || 10;
     timeLimit = parseInt(timeLimitInput.value) || 60;
     
+    if (typeof umami !== 'undefined') {
+        umami.track('kwadraty-game-start');
+    }
+    
     menuScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
     
@@ -113,7 +117,11 @@ function winGame() {
     stopGame();
     boardContainer.classList.add('hidden');
     timerDisplay.classList.add('hidden');
-    
+
+    if (typeof umami !== 'undefined') {
+        umami.track('kwadraty-game-won');
+    }
+
     resultMessage.textContent = `Zrobiłeś board = ${boardSize}\nw ${timeLimit - timeLeft} s`;
     resultMessage.classList.remove('hidden');
 }
@@ -122,6 +130,10 @@ function loseGame() {
     stopGame();
     boardContainer.classList.add('hidden');
     timerDisplay.classList.add('hidden');
+    
+    if (typeof umami !== 'undefined') {
+        umami.track('kwadraty-game-finish');
+    }
     
     resultMessage.textContent = `Twój wynik: ${expectedNumber}\nboard = ${boardSize}`;
     resultMessage.classList.remove('hidden');
