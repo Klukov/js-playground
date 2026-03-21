@@ -1,6 +1,7 @@
 # JS Playground
 
 A clean, minimalist, and slightly experimental personal space for JavaScript micro-apps, prototypes, and experiments.
+
 https://klukov.github.io/js-playground/
 
 ## 🚀 Projects
