@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Letters</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://umami-proxy.klukov.workers.dev/script.js" data-website-id="71deff4b-cbb9-4314-b16f-b1f514550ec6"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Fake Letters</h1>
+        <p class="subtitle">Paste text or a domain and check if it contains suspicious characters from other alphabets (homoglyphs).</p>
+        <textarea id="text-input" maxlength="1000" placeholder="e.g. аpple.com (Cyrillic 'а')"></textarea>
+        <div class="char-count"><span id="char-count">0</span> / 1000</div>
+        <div class="buttons">
+            <button id="check-btn" class="btn-check">Check</button>
+            <button id="clean-btn" class="btn-clean">Clear</button>
+        </div>
+        <div id="result-box" class="result-box hidden">
+            <div id="result-title" class="result-title"></div>
+            <div id="result-details" class="result-details"></div>
+        </div>
+    </div>
+    <script src="homoglyphs.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

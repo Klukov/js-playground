@@ -6,6 +6,12 @@ const apps = [
     path: "./kwadraty/",
     description: "Interactive square-based experiment.",
     eventName: "mainPage-button-kwadraty"
+  },
+  {
+    name: "Fake Letters",
+    path: "./fake-letters/",
+    description: "Detect suspicious homoglyph characters hiding in text and domains.",
+    eventName: "mainPage-button-fakeLetters"
   }
 ];
 

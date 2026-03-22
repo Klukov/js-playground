@@ -8,6 +8,7 @@ A clean, minimalist, and slightly experimental personal space for JavaScript mic
 
 The playground currently features:
 - **<a href="https://klukov.github.io/js-playground/kwadraty/" target="_blank">Kwadraty</a>** – An interactive square-based experiment.
+- **<a href="https://klukov.github.io/js-playground/fake-letters/" target="_blank">Fake Letters</a>** – Detect suspicious homoglyph characters hiding in text and domains.
 - *More coming soon...*
 
 ## 🛠️ Technical Stack
