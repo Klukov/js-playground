@@ -9,6 +9,7 @@ A clean, minimalist, and slightly experimental personal space for JavaScript mic
 The playground currently features:
 - **<a href="https://klukov.github.io/js-playground/kwadraty/" target="_blank">Kwadraty</a>** – An interactive square-based experiment.
 - **<a href="https://klukov.github.io/js-playground/fake-letters/" target="_blank">Fake Letters</a>** – Detect suspicious homoglyph characters hiding in text and domains.
+- **<a href="https://klukov.github.io/js-playground/annoying-password-generator/" target="_blank">Annoying Password Generator</a>** – Generate passwords with sneaky homoglyph characters from other alphabets.
 - *More coming soon...*
 
 ## 🛠️ Technical Stack

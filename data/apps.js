@@ -12,6 +12,12 @@ const apps = [
     path: "./fake-letters/",
     description: "Detect suspicious homoglyph characters hiding in text and domains.",
     eventName: "mainPage-button-fakeLetters"
+  },
+  {
+    name: "Annoying Password Generator",
+    path: "./annoying-password-generator/",
+    description: "Generate passwords with sneaky homoglyph characters from other alphabets.",
+    eventName: "mainPage-button-annoyingPasswordGenerator"
   }
 ];
 

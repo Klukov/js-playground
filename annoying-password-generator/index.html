@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annoying Password Generator</title>
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://umami-proxy.klukov.workers.dev/script.js" data-website-id="71deff4b-cbb9-4314-b16f-b1f514550ec6"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔑 Annoying Password Generator</h1>
+        <p class="subtitle">Generate passwords that look normal but contain sneaky characters from other alphabets.</p>
+
+        <div class="password-display" id="password-display">Click "Generate" to create a password</div>
+        <div class="password-actions">
+            <button id="copy-btn" class="btn-copy" title="Copy to clipboard">📋 Copy</button>
+        </div>
+
+        <div class="options">
+            <div class="option-row">
+                <label for="length-input">Password length</label>
+                <input type="number" id="length-input" value="20" min="6" max="100">
+            </div>
+            <div class="option-row">
+                <label for="opt-dash">
+                    <input type="checkbox" id="opt-dash" checked>
+                    Separate with dashes (groups of 5)
+                </label>
+            </div>
+            <div class="option-row">
+                <label for="opt-homoglyphs">
+                    <input type="checkbox" id="opt-homoglyphs">
+                    Include homoglyphs (identical-looking)
+                </label>
+            </div>
+            <div class="option-row">
+                <label for="opt-lookalikes">
+                    <input type="checkbox" id="opt-lookalikes" checked>
+                    Include look-alike letters (similar-looking)
+                </label>
+            </div>
+            <div class="option-row">
+                <label for="min-special">Minimum special characters</label>
+                <input type="number" id="min-special" value="1" min="0" max="100">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="generate-btn" class="btn-generate">Generate</button>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
