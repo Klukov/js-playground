@@ -1,5 +1,4 @@
-// Map of suspicious homoglyph characters
-// Key: suspicious character, Value: { latin: Latin equivalent, script: script name, unicode: Unicode code point }
+// Map of homoglyph characters — visually identical to Latin letters
 const HOMOGLYPHS = {
   // Cyrillic lowercase
   '\u0430': { latin: 'a', script: 'Cyrillic', unicode: 'U+0430' },
@@ -74,3 +73,27 @@ const HOMOGLYPHS = {
   '\uFF59': { latin: 'y', script: 'Fullwidth', unicode: 'U+FF59' },
   '\uFF5A': { latin: 'z', script: 'Fullwidth', unicode: 'U+FF5A' },
 };
+
+// Map of look-alike characters — not identical but visually similar to Latin letters
+const LOOK_ALIKES = {
+  // Greek lowercase
+  '\u03B1': { latin: 'a', script: 'Greek', unicode: 'U+03B1' },  // α — alpha
+  '\u03B5': { latin: 'e', script: 'Greek', unicode: 'U+03B5' },  // ε — epsilon
+  '\u03B9': { latin: 'i', script: 'Greek', unicode: 'U+03B9' },  // ι — iota
+  '\u03BA': { latin: 'k', script: 'Greek', unicode: 'U+03BA' },  // κ — kappa
+  '\u03C1': { latin: 'p', script: 'Greek', unicode: 'U+03C1' },  // ρ — rho
+  '\u03C4': { latin: 't', script: 'Greek', unicode: 'U+03C4' },  // τ — tau
+  '\u03C5': { latin: 'u', script: 'Greek', unicode: 'U+03C5' },  // υ — upsilon
+  '\u03C9': { latin: 'w', script: 'Greek', unicode: 'U+03C9' },  // ω — omega
+  '\u03B6': { latin: 'z', script: 'Greek', unicode: 'U+03B6' },  // ζ — zeta (lowercase)
+  '\u03B7': { latin: 'n', script: 'Greek', unicode: 'U+03B7' },  // η — eta
+  // Cyrillic lowercase
+  '\u0432': { latin: 'b', script: 'Cyrillic', unicode: 'U+0432' },  // в — ve
+  '\u043A': { latin: 'k', script: 'Cyrillic', unicode: 'U+043A' },  // к — ka
+  '\u043D': { latin: 'h', script: 'Cyrillic', unicode: 'U+043D' },  // н — en
+  '\u0442': { latin: 't', script: 'Cyrillic', unicode: 'U+0442' },  // т — te
+  '\u043C': { latin: 'm', script: 'Cyrillic', unicode: 'U+043C' },  // м — em
+};
+
+// Merged map: all suspicious characters (homoglyphs + look-alikes)
+const SUSPICIOUS_CHARS = { ...HOMOGLYPHS, ...LOOK_ALIKES };

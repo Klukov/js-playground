@@ -21,8 +21,10 @@
             <div id="result-title" class="result-title"></div>
             <div id="result-details" class="result-details"></div>
         </div>
+        <!-- Preload emoji font to avoid lag on first Check click -->
+        <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none" aria-hidden="true">✅❌⚠️</div>
     </div>
-    <script src="homoglyphs.js"></script>
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
