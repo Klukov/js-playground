@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwadraty</title>
     <link rel="icon" type="image/png" href="icon.png">
+    <script>
+        // Apply theme before first paint to avoid a flash of the wrong theme.
+        (function () {
+            try {
+                var stored = localStorage.getItem('kwadraty-theme');
+                var theme = (stored === 'light' || stored === 'dark')
+                    ? stored
+                    : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
     <link rel="stylesheet" href="style.css">
     <script defer src="https://umami-proxy.klukov.workers.dev/script.js" data-website-id="71deff4b-cbb9-4314-b16f-b1f514550ec6"></script>
 </head>
 <body>
+    <button id="theme-toggle" aria-label="Przełącz tryb ciemny/jasny" title="Przełącz tryb ciemny/jasny"></button>
     <div id="app">
         <!-- Main Menu -->
         <div id="menu-screen" class="screen">

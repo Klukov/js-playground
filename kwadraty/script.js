@@ -1,4 +1,5 @@
  // DOM Elements
+const themeToggleBtn = document.getElementById('theme-toggle');
 const menuScreen = document.getElementById('menu-screen');
 const gameScreen = document.getElementById('game-screen');
 const boardSizeInput = document.getElementById('board-size');
@@ -22,12 +23,55 @@ let isGameActive = false;
 
 // Initialization
 function init() {
+    initTheme();
     startBtn.addEventListener('click', startGame);
     restoreDefaultsBtn.addEventListener('click', restoreDefaults);
     resetBtn.addEventListener('click', resetGame);
     menuBtn.addEventListener('click', showMenu);
     window.addEventListener('resize', handleResize);
     handleResize();
+}
+
+// Theme (dark/light mode)
+const THEME_STORAGE_KEY = 'kwadraty-theme';
+
+function getPreferredTheme() {
+    const stored = localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored === 'light' || stored === 'dark') return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeToggleBtn) {
+        themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeToggleBtn.setAttribute(
+            'aria-label',
+            theme === 'dark' ? 'Przełącz na tryb jasny' : 'Przełącz na tryb ciemny'
+        );
+    }
+}
+
+function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem(THEME_STORAGE_KEY, next);
+    applyTheme(next);
+}
+
+function initTheme() {
+    applyTheme(getPreferredTheme());
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', toggleTheme);
+    }
+
+    // Follow system changes live, but only while the user hasn't picked manually.
+    const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    colorSchemeQuery.addEventListener('change', (e) => {
+        if (!localStorage.getItem(THEME_STORAGE_KEY)) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
 }
 
 function restoreDefaults() {
