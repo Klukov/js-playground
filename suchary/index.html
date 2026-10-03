@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suchary | JS Playground</title>
+  <link rel="icon" type="image/png" href="../icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://umami-proxy.klukov.workers.dev/script.js" data-website-id="71deff4b-cbb9-4314-b16f-b1f514550ec6"></script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <main class="page">
+    <a class="back-link" href="../index.html">← Powrót do JS Playground</a>
+    <header class="hero">
+      <img src="../logo.png" alt="PK Logo" class="logo">
+      <h1>Suchary</h1>
+      <p>
+        Poniżej możesz pobrać aplikację desktopową z bazą sucharów z sadol.pl.
+      </p>
+    </header>
+
+    <section class="download-card" aria-label="Pobieranie aplikacji Suchary">
+      <h2>sadol-dowcipy-desktop.exe</h2>
+      <p>
+        Jednoplikowa aplikacja Windows (Rust) z wbudowaną bazą dowcipów.
+      </p>
+      <a
+        class="download-btn"
+        href="./sadol-dowcipy-desktop.exe"
+        download="sadol-dowcipy-desktop.exe"
+        onclick="if (typeof umami !== 'undefined') umami.track('suchary-download-exe');"
+      >
+        Pobierz plik .exe
+      </a>
+    </section>
+    <p class="file-hash">sha-256: 6b60fdc8be427eb60100907c9a4f52ffa2ea9c67adf375d48a981527c2ff98a9</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
