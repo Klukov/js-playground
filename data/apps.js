@@ -8,6 +8,12 @@ const apps = [
     eventName: "mainPage-button-kwadraty"
   },
   {
+    name: "Suchary",
+    path: "./suchary/",
+    description: "Download the desktop app with the Sadol.pl jokes archive.",
+    eventName: "mainPage-button-suchary"
+  },
+  {
     name: "Fake Letters",
     path: "./fake-letters/",
     description: "Detect suspicious homoglyph characters hiding in text and domains.",
