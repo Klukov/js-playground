@@ -21,20 +21,71 @@
     </header>
 
     <section class="download-card" aria-label="Pobieranie aplikacji Suchary">
-      <h2>sadol-dowcipy-2.0.0.exe</h2>
+      <h2>sadol-dowcipy 3.0.0</h2>
       <p>
-        Jednoplikowa aplikacja Windows (Rust) z wbudowaną bazą dowcipów.
+        Jednoplikowa aplikacja desktopowa (Rust) z wbudowaną bazą dowcipów.
       </p>
-      <a
-        class="download-btn"
-        href="./sadol-dowcipy-2.0.0.exe"
-        download="sadol-dowcipy-2.0.0.exe"
-        onclick="if (typeof umami !== 'undefined') umami.track('sucharyWeb-download-exe');"
-      >
-        Pobierz plik .exe
+      <a id="main-download" class="download-btn" href="./sadol-dowcipy-3.0.0.exe" download="sadol-dowcipy-3.0.0.exe" data-os="windows">
+        Pobierz dla Windows
       </a>
+      <p class="detect-note" id="detect-note">Nie wykryto systemu? Domyślnie wybrano Windows.</p>
     </section>
-    <p class="file-hash">sha-256: a18971c8f3293a933332877a4d6fd86aef0b724978909bb437cb9b90b14c227a</p>
+
+    <section class="all-versions" aria-label="Wszystkie wersje">
+      <h3>Wszystkie wersje</h3>
+      <ul class="version-list">
+        <li class="version-item" data-os="windows">
+          <div class="version-info">
+            <strong>Windows</strong>
+            <span class="file-name">sadol-dowcipy-3.0.0.exe</span>
+            <details class="hash">
+              <summary>SHA-256</summary>
+              <div class="hash-row">
+                <code>4f6b4826895d1ab37b6c40b2298e6414acaf1f69e6ea4316b7bf015b2c12cfc7</code>
+                <button type="button" class="copy-btn">Kopiuj</button>
+              </div>
+            </details>
+          </div>
+          <a class="download-btn small" href="./sadol-dowcipy-3.0.0.exe" download="sadol-dowcipy-3.0.0.exe">Pobierz</a>
+        </li>
+        <li class="version-item" data-os="mac">
+          <div class="version-info">
+            <strong>macOS</strong>
+            <span class="file-name">sadol-dowcipy-mac-3.0.0.zip</span>
+            <details class="hash">
+              <summary>SHA-256</summary>
+              <div class="hash-row">
+                <code>dc2ca013c05b98e0997e00be1e1d1ed17859c0bd61a00948e96a70a6fc549626</code>
+                <button type="button" class="copy-btn">Kopiuj</button>
+              </div>
+            </details>
+            <details class="howto">
+              <summary>Jak uruchomić na macOS?</summary>
+              <p>Kliknij pobrany plik dwukrotnie, żeby go rozpakować. Potem kliknij rozpakowaną aplikację prawym przyciskiem, wybierz „Otwórz” i potwierdź. Aplikacja nie jest podpisana przez Apple, więc przy pierwszym uruchomieniu system pokaże ostrzeżenie. Jeśli „Otwórz” nie pomoże, wpisz w Terminalu: <code>xattr -d com.apple.quarantine sadol-dowcipy-mac-3.0.0</code></p>
+            </details>
+          </div>
+          <a class="download-btn small" href="./sadol-dowcipy-mac-3.0.0.zip" download="sadol-dowcipy-mac-3.0.0.zip">Pobierz</a>
+        </li>
+        <li class="version-item" data-os="linux">
+          <div class="version-info">
+            <strong>Linux</strong>
+            <span class="file-name">sadol-dowcipy-linux-3.0.0.tar.gz</span>
+            <details class="hash">
+              <summary>SHA-256</summary>
+              <div class="hash-row">
+                <code>237a8d856a44e2db8c8fdc980d274470a0789d4c4bf4b2426245f530250802ae</code>
+                <button type="button" class="copy-btn">Kopiuj</button>
+              </div>
+            </details>
+            <details class="howto">
+              <summary>Jak uruchomić na Linuksie?</summary>
+              <p>Rozpakuj archiwum i uruchom aplikację: <code>tar -xzf sadol-dowcipy-linux-3.0.0.tar.gz &amp;&amp; ./sadol-dowcipy-linux-3.0.0</code></p>
+            </details>
+          </div>
+          <a class="download-btn small" href="./sadol-dowcipy-linux-3.0.0.tar.gz" download="sadol-dowcipy-linux-3.0.0.tar.gz">Pobierz</a>
+        </li>
+      </ul>
+    </section>
   </main>
   <script src="script.js"></script>
 </body>
